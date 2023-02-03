@@ -48,16 +48,21 @@ unique(dataIn$Site[dataIn$Treatment == treat[4]])
 treat[5]
 unique(dataIn$Site[dataIn$Treatment == treat[5]])
 #treatment rename
-#UB1+Rx (10,20)
 dataIn$Treatment2 = dataIn$Treatment #make copy
+dataIn$Treatment2[dataIn$Site == 10]
 
-levels(dataIn$Treatment)[1] = "UB2" #10,20
-
+levels(dataIn$Treatment)[1] = "UB2"    #40,50
+unique( dataIn$Site[dataIn$Treatment == "UB2"] )
 levels(dataIn$Treatment)[2] = "UB1"    #30
-levels(dataIn$Treatment)[3] = "UB1+Rx"    #40,50
+unique( dataIn$Site[dataIn$Treatment == "UB1"] )
+levels(dataIn$Treatment)[3] = "UB1+Rx" #10,20
+unique( dataIn$Site[dataIn$Treatment == "UB1+Rx"] )
 levels(dataIn$Treatment)[4] = "RF1"    #60,70
+unique( dataIn$Site[dataIn$Treatment == "RF1"] )
 levels(dataIn$Treatment)[5] = "RF1+Rx" #80,90
+unique( dataIn$Site[dataIn$Treatment == "RF1+Rx"] )
 levels( dataIn$Treatment )
+
 
 #--------------------------------------------------
 # Look for shifts in phenology- find days with max ACI-- Table 4

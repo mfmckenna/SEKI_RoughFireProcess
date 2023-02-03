@@ -2,7 +2,7 @@ rm(list=ls())
 
 #--------------------------------------------------
 #READ IN DATA
-dataDir = "D:\\NSNSD_Projects\\SEKI Rough Fire Analysis\\data\\"
+dataDir = "G:\\My Drive\\ActiveProjects\\MANUSCRIPTS\\2.InReview\\EM_SEKIFire\\data"
 setwd(dataDir)
 modelIn = choose.files(caption = "SEKI_dailyGAMMwithoutT_2020-06-16")
 load(modelIn)
